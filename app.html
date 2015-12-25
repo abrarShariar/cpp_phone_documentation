@@ -19,15 +19,8 @@
 			    float: right;
     			margin-top: -2%;
 		}
-        #dataMember{
-                margin-left: 10%;
-        }
-        #dataMember em{
-            color:#0C6317;
-        }
 
 	</style>
-
 </head>
 <body>
 
@@ -35,7 +28,7 @@
 <nav class="navbar navbar-default navbar-static-top">
   		<div class="container">
   			<h4> <a href="index.html">C++ Phone Documentation</a></h4>
-      	</div>
+      	</div> 
 </nav>
 
 <div style="float: right;">
@@ -48,17 +41,17 @@
 	<!-- main body -->
 	<div class="container">
 		<div class="col-md-3">
-		    <!-- Left column for index of content -->
+		<!-- Left column for index of content -->
+					<div class="list-group"><br><br>
 
-          <div class="list-group">
+             <div class="list-group">
               <br>
         <button type="button" class="list-group-item"><a href="howtoSFML.html">How to set up SFML </a></button>
         <button type="button" class="list-group-item"><a href="howtorun.html">How to run the software </a></button>
         <button type="button" class="list-group-item"><a href="howitworks.html">How it works </a></button>
         </div><br>
 
-
-      <div class="list-group"><br><br>
+			<div class="list-group"><br><br>
 
   <button type="button" class="list-group-item" disabled="disabled"> <a href="person.html">Person.h</a></button>
   <button type="button" class="list-group-item"><a href="phone.html">Phone.h</a></button>
@@ -73,10 +66,10 @@
   <button type="button" class="list-group-item"><a href="dice.html">Dice.h</a></button>
    <button type="button" class="list-group-item"><a href="app.html">App.h</a></button>
 
-      </div><br>
 
+			</div><br>
 
-            <div class="list-group">
+           <div class="list-group">
 
         <button type="button" class="list-group-item"><a href="headerFunctions.html#iostream">< iostream ></a></button>
           <button type="button" class="list-group-item"><a href="headerFunctions.html#ctime">< ctime ></a></button>
@@ -92,157 +85,71 @@
 
                <button type="button" class="list-group-item"><a href="headerFunctions.html#vector">< vector ></a></button>
               <button type="button" class="list-group-item"><a href="headerFunctions.html#map">< map ></a></button>
-
-
         </div><br>
 
-      <div class="list-group">
+		</div>
 
-        <button type="button" class="list-group-item"><a href="howtoSFML.html">How to set up SFML </a></button>
-        <button type="button" class="list-group-item"><a href="howtorun.html">How to run the software </a></button>
-                <button type="button" class="list-group-item"><a href="howitworks.html">How it works </a></button>
+		</div>
 
-        </div><br>
+    <div class="col-md-9">
+      <br>
+        <h2><em>App.h</em></h2>
+        <p>This file contains the defination of functions which initializes the Phone apps</p>
+        <hr>
+        
+        <br>
+
+          <h3>Functions: </h3>
+          <br>
+          <strong>void</strong> <em>useContactsApp()</em>
+          <br>
+          <strong>void</strong> <em>useCalculatorApp()</em>
+          <br>
+          <strong>void</strong> <em>useGameApp()</em>
+          <br>
+          <strong>void</strong> <em>usePhoneApp()</em>
+          <br>
+          <strong>void</strong> <em>useTextApp()</em>
+          <br>
+          <strong>void</strong> <em>useMusicApp()</em>
+          <br>
+          <br>
+          <h3>Code: </h3>
+          <pre>
+              /*
+    This file contains the necessary functions to execute the usage of the apps
+*/
+
+//Use Contacts App (call from SFML.cpp)
+void useContactsApp();
+
+//Use Calculator App (call from SFML.cpp)
+void useCalculatorApp();
+
+//Use Games App (call from SFML.cpp)
+void useGameApp();
+
+//Use Phone App (call from SFML.cpp)
+void usePhoneApp();
+
+//Use Text App (call from SFML.cpp)
+void useTextApp();
+
+//Use Music App (call from SFML.cpp)
+void useMusicApp();
+
+
+          </pre>  
+
+
+
+
+
 
 
     </div>
-<div class="col-md-9">
-				<div class="col-md-9">
-			<h1><i>&nbsp&nbspPhoneBook.h </i></h1>
-            <p>This header file deifnes the class <strong>PhoneBook </strong></p>
-            <hr><br>
-            <h3>Brief Description: </h3>
-
-             <br><p>- Contains data members to save in a file as a Phonebook entry for each Phone.
-                </p>
-
-    
-    <br>
-            <h3>Data Members <small>[private] </small></h3>
-
-            <div id="dataMember">
-            <li><em>string</em>  contactName</li>
-             <li><em>string</em>  contactNumber</li>
-            <li><em>int</em>  contactIndex</li>
-            </div><br>
-
-
-            <h3>Member Functions <small>[public] </small></h3>
-                <div id="dataMember">
-                <li>PhoneBook() <small>&nbsp [default constructor]</small></li>
-            <li>PhoneBook(<em>string</em> contactName, <em>string</em> contactNumber )<small> &nbsp [parameterize constructor]</small></li>
-
-             <li><em>void </em>  setContactName(<em>string</em> contactName)</li>
-            <li><em>void</em>  setContactNumber(<em>string</em> contactNumber)</li>
-            <li><em>string</em>  getContactName()</li>
-             <li><em>string</em> getContactNumber()</li>
-
-            </div><br>
-
-            <h3>Static Members <small>[public] </small></h3>
-                <div id="dataMember">
-                    <li><em>int</em>  contactCount</li>
-                    <li><em>void</em>  getContactCount</li>
-                </div><br>
-            
-                <h3>Code </h3>
-            
-
-			<div id="code">
-					<!-- CODE -->
-<pre>
-/*
-    This class is part of an extension to the other classes.
-    Creates a PhoneBook entry for each phone
-    Data members are: private
-    Member functions: public
-*/
-
-#include< iostream>
-using namespace std;
-
-class PhoneBook{
-    private:
-        string contactName;
-        string contactNumber;
-        int contactIndex;
-    public:
-        PhoneBook();
-        PhoneBook(string contactName,string contactNumber);
-        //setters
-        void setContactName(string contactName);
-        void setContactNumber(string contactNumber);
-        //getters
-        string getContactName();
-        string getContactNumber();
-        int getContactIndex();
-        //static members
-        static int contactCount;
-        static void getContactCount();
-};
-
-int PhoneBook::contactCount=0;
-PhoneBook::PhoneBook(){
-    this->contactName="";
-    this->contactNumber="";
-    contactCount++;
-    this->contactIndex=contactCount;
-}
-
-PhoneBook::PhoneBook(string contactName,string contactNumber){
-    this->contactName=contactName;
-    this->contactNumber=contactNumber;
-    contactCount++;
-}
-
-void PhoneBook::setContactName(string contactName){
-    this->contactName=contactName;
-}
-void PhoneBook::setContactNumber(string contactNumber){
-    this->contactNumber=contactNumber;
-}
-
-string PhoneBook::getContactName(){
-    return this->contactName;
-}
-string PhoneBook::getContactNumber(){
-    return this->contactNumber;
-}
-int PhoneBook::getContactIndex(){
-    return this->contactIndex;
-}
-
-
-
-
-
-
-
-</pre>
-
-
-			</div>
-				</div>
-		</div>
-	</div>
-
-				</div>
-
-
-
-		</div>
-
-
-
-
-
-
 
 	</div>
-
-
-
-
 
 
 </body>
